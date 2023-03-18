@@ -1,0 +1,180 @@
+@import '../../sass/general.scss';
+// @include center (flex , center , space-between);
+// @include text (22px , 500 , 16px , #2b71cb);
+
+.site-header{
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    .top{
+        background-color: #2b71cb;
+    }
+
+    .center{
+        border-bottom: 1px solid #967e7e;
+    }
+
+    .header{
+
+        &__top{
+            padding: 10px 0;
+            @include center (flex , center , space-between);
+
+            .discounts{
+                padding: 7px 10px;
+                border: 1px solid #fff ;
+                border-radius: 5px;
+                @include text (16px , 500 , 16px , #fff);
+                text-decoration: none;
+            }
+
+            .cards{
+                @include center (flex , center , none);
+                gap: 30px;
+
+                .phone{
+                    @include text (20px , 500 , 16px , #fff);
+                    text-decoration: none;
+                }
+
+                .lang{
+                    @include center (flex , center , none);
+                    gap: 20px;
+
+                    .langs{
+                        @include text (16px , 500 , 16px , #999);
+                        cursor: pointer;
+                    }
+
+                    .active{
+                        @include text (16px , 600 , 16px , #fff);
+                    }
+                }
+            }
+        }
+
+        &__center{
+            @include center (flex , center , space-between);
+            padding: 10px 0;
+
+            .logo{
+                @include text (22px , 500 , 16px , #2b71cb);
+                letter-spacing: 1px;
+                text-decoration: none;
+            }
+
+            .input {
+                max-width: 500px;
+                width: 100%;
+                position: relative;
+
+                & > input{
+                    width: 100%;
+                    padding: 7px 30px 7px 10px;
+                    outline: none;
+                    border: 1px solid #2b71cb;
+                    letter-spacing: 1px;
+                    border-radius: 10px;
+
+                    &::placeholder{
+                        @include text (14px , 500 , 16px , #2b71cb);
+                    }
+
+                    &:valid{
+                        letter-spacing: 1px;
+                        @include text (16px , 500 , 16px , #2b71cb);
+                    }
+
+                    &:focus{
+                        border: 1px solid #222;
+                        color: #222;
+                    }
+                }
+
+                & > i {
+                    position: absolute;
+                    right: 15px;
+                    top: 8px;
+                    font-size: 16px;
+                    color: #2b71cb;
+                    cursor: pointer;
+                }
+            }
+
+            .content{
+
+                .header__card{
+                    @include center (flex , center , none);
+                    text-align: center;
+                    gap: 30px;
+                    padding: 0;
+                    margin: 0;
+                    
+                    &-item{
+                        cursor: pointer;
+                        position: relative;
+                        background-color: transparent;
+                        text-decoration: none;
+                        color: #2b71cb;
+                        
+                        & > div > i {
+                            font-size: 21px;
+                        }
+        
+                        & > #Korzinka{
+                            position: absolute;
+                            top: -5px;
+                            right: 10px;
+                            width: 15px;
+                            height: 15x;
+                            border-radius: 50%;
+                            background-color: #cb2b2b;
+                            color: #fff;
+                            font-size: 10px;
+                        }
+        
+                        & > #Sevimlilar{
+                            position: absolute;
+                            top: -5px;
+                            right: 15px;
+                            width: 15px;
+                            height: 15x;
+                            border-radius: 50%;
+                            background-color: #cd2b2b;
+                            color: #fff;
+                            font-size: 10px;
+                        }
+        
+                        & > p {
+                            @include text (16px , 400 , 20px , #222);
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__bottom {
+            padding: 15px 0;
+
+            .navbar{
+                @include center (flex , center , space-between);
+
+                .nav{
+                    @include center (flex , center , none);
+                    gap: 10px;
+                    @include text (16px , 500 , 20px , #261e1e);
+                    text-decoration: none;
+
+                    &:hover{
+                        @include text (16px , 500 , 20px , #2b71cb);
+                    }
+                }
+
+                .active{
+                    @include text (16px , 500 , 16px , #2b71cb);
+                }
+            }
+        }
+    }
+}

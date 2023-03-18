@@ -1,0 +1,46 @@
+@import '../sass/general.scss';
+.product-section{
+    margin: 30px 0;
+    
+    .product {
+      
+        &__top{
+            @include center (flex , flex-start , space-between);
+
+            .left {
+                width: 34%;
+                background-color: #fff;
+                padding: 70px;
+                border-radius: 30px;
+                position: relative;
+
+                & > img{
+                    width: 320px;
+                    height: 320px;
+                    cursor: zoom-in;
+                }
+
+                .like{
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    padding: 10px;
+                    border-radius: 50%;
+                    right: 20px;
+                    top: 20px;
+                    background-color: #2b71cb;
+                    cursor: pointer;
+
+                    & > i {
+                        position: absolute;
+                        font-size: 20px;
+                        left: 50%;
+                        top: 50%;
+                        color: #fff;
+                        transform: translate(-50% , -50%);
+                    }
+                }
+            }
+        }
+    }
+}

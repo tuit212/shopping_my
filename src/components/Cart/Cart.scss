@@ -1,0 +1,142 @@
+@import '../../sass/general.scss';
+.card-section{
+    margin-top: 30px;
+
+    .cards{
+
+        & > h3 {
+            @include text (18px , 500 , 1.2 , #858997);
+            margin-bottom: 15px;
+        }
+
+        .list{
+            padding: 0;
+            @include center (flex , flex-center , none);
+            gap: 16px;
+            flex-wrap: wrap;
+
+            .card{
+                width: 24%;
+                cursor: pointer;
+                position: relative; 
+                transition: all 0.4s;
+                text-decoration: none;
+
+                &-pos{
+                    top: 10px;
+                    left: 10px;
+                    right: 20px;
+                    position: absolute;
+                    @include center (flex , flex-center , space-between);
+
+                    .chegirma{
+                        width: 70px;
+                        height: 25px;
+                        background-color: #2b71cb;
+                        text-align: center;
+                        position: relative;
+                        border-radius: 5px;
+
+                        & > h4 {
+                            margin: 0;
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50% , -50%);
+                            @include text (12px , 600 , 12px , #fff);
+                        }
+                    }
+
+                    .left{
+
+                        .item:nth-child(1){
+                            padding: 5px 10px;
+                            background-color: #2b71cb;
+                            color: #fff;
+                            border-radius: 50%;
+                        }
+
+                        .item:nth-child(2){
+                            margin-top: 10px;
+                            padding: 5px 10px;
+                            background-color: #2b71cb;
+                            color: #fff;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                .card-img-top{
+                    padding: 10px 20px;
+                    transition: all 0.4s;
+                }
+
+
+                &-body{
+                    padding: 5px 16px 5px 10px;
+
+                    .card-title{
+                        @include text (14px , 500 , 12px , #141821);
+                    }
+
+                    .const{
+                        display: block;
+                        margin-top: 20px;
+                        @include text (14px , 500 , 12px , #ee0707);
+                        text-decoration: line-through;
+                    }
+
+                    .price{
+                        @include text (18px , 500 , 12px , #141821);
+                        display: block;
+                        margin-top: 10px;
+                    }
+
+                    .card-btn{
+                        display: block;
+                        margin: 30px 0 20px 0;
+                        width: 100%;
+                        padding: 10px 0;
+                        border: none;
+                        background-color: #2b71cb;
+                        @include text (13px , 500 , 12px , #fff);
+                        border-radius: 10px;
+                        cursor: pointer;
+                        position: relative;
+                        z-index: 2;
+
+                        &::after{
+                            position: absolute;
+                            content: ' ';
+                            width: 0;
+                            height: 100%;
+                            left: 0;
+                            top: 0;
+                            border-radius: 10px;
+                            transition: ease .4s;
+                            background-color: #0651b3;
+                            z-index: -1;
+                        }
+
+                        &:hover::after{
+                            width: 100%;
+                        }
+                    }
+
+                }
+
+                &:hover{
+                    transition: all 0.4s;
+
+                    .card-img-top{
+                        transform: scale(0.9);
+                    }
+
+                    .card-title{
+                        @include text (14px , 500 , 12px , #2b71cb);
+                    }
+                }
+            }
+        }
+    }
+}
